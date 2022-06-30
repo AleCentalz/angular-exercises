@@ -1,0 +1,53 @@
+<div *ngIf="!country; else divCountry" class="alert alert-info">
+  Loading...
+</div>
+
+
+<ng-template #divCountry>
+  <div class="row">
+    <div class="col-12">
+      <h1>Country: <small>{{ country.name }}</small></h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <h3>Flag</h3>
+      <img [src]="country.flag" alt="Flag" class="img-thumbnail" />
+    </div>
+    <div class="col">
+      <h3>Information</h3>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Population</strong>
+          <p>{{country.population | number }}</p>
+        </li>
+        <li class="list-group-item">
+          <strong>Numeric Code</strong>
+          <p>{{ country.numericCode | number}}</p>
+        </li>
+        <li class="list-group-item">
+          <strong>Alpha Number</strong>
+          <p>{{ country.alpha2Code}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Translations</h3>
+  <div class="row">
+    <div class="col">
+      <span class="badge bg-primary mx-1">{{ country.translations.es}}</span>
+      <span class="badge bg-primary mx-1">{{ country.translations.de}}</span>
+      <span class="badge bg-primary mx-1">{{ country.translations.br}}</span>
+      <span class="badge bg-primary mx-1">{{ country.translations.fa}}</span>
+      <span class="badge bg-primary mx-1">{{ country.translations.fr}}</span>
+      <span class="badge bg-primary mx-1">{{ country.translations.hr}}</span>
+      <span class="badge bg-primary mx-1">{{ country.translations.it}}</span>
+      <span class="badge bg-primary mx-1">{{ country.translations.ja}}</span>
+      <span class="badge bg-primary mx-1">{{ country.translations.nl}}</span>
+      <span class="badge bg-primary mx-1">{{ country.translations.pt}}</span>
+    </div>
+  </div>
+
+</ng-template>
