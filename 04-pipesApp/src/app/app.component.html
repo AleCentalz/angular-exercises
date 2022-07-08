@@ -1,4 +1,21 @@
-<h1>{{ name | titlecase }}</h1>
-<h1>{{ value | number }}</h1>
+<app-menu></app-menu>
 
-<button (click)="showName()">Change name</button>
+<!-- <div class="text-layout">
+  <h1>{{ name | titlecase }}</h1>
+  <h1>{{ value | number }}</h1>
+</div>
+ -->
+
+<router-outlet></router-outlet>
+<!-- 
+<p-card [style]="{'width': '25rem', 'margin-bottom': '2em'}" [header]="name | titlecase" subheader="Subheader">
+  <ng-template pTemplate="header">
+    <h3>Header</h3>
+  </ng-template>
+  Body Content
+  <ng-template pTemplate="footer">
+    Footer content here
+  </ng-template>
+</p-card> 
+<button pButton type="button" (click)="showName()" icon="pi pi-heart-fill" iconPos="right" label="Change name"></button>
+-->
