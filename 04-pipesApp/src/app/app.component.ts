@@ -1,4 +1,6 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component } from '@angular/core';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name: string = "Ale cenTeno";
-  value: number = 1000;
+  constructor(private primengConfig: PrimeNGConfig) { }
 
-  showName() {
-    console.log(this.name);
+  ngOnInit() {
+    this.primengConfig.ripple = true; //this will make a bubble animation in the fieldset
   }
+
 }
