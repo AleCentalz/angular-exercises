@@ -5,9 +5,9 @@ import { CardModule } from 'primeng/card';
 //modulo personalizado
 
 import { FieldsetModule } from 'primeng/fieldset';
-
-
 import { MenubarModule } from 'primeng/menubar';
+import { ToolbarModule } from 'primeng/toolbar';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [],
@@ -15,7 +15,9 @@ import { MenubarModule } from 'primeng/menubar';
     ButtonModule,
     CardModule,
     MenubarModule,
-    FieldsetModule
+    FieldsetModule,
+    ToolbarModule,
+    TableModule
   ]
 })
 export class PrimeNgModule { }
