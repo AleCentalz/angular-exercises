@@ -1,2 +1,37 @@
-<p>Characters app</p>
-<!-- <router-outlet></router-outlet> -->
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="push">
+    <mat-toolbar color="primary">
+      <span>Menu</span>
+    </mat-toolbar>
+    <mat-list>
+      <a href="/characters/listing" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon>label</mat-icon>
+        <span>List characters</span>
+      </a>
+      <a href="/characters/add" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon>add</mat-icon>
+        <span>Add a character</span>
+      </a>
+      <a href="/characters/search" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon>search</mat-icon>
+        <span>Search a character</span>
+      </a>
+    </mat-list>
+  </mat-sidenav>
+
+  <!--siempre se necesita este: -->
+  <mat-toolbar>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="spacer"></div>
+    <button mat-button>
+      Logout
+    </button>
+  </mat-toolbar>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-sidenav-container>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './characters/pages/home/home.component';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 
 const routes: Routes = [
@@ -9,12 +10,16 @@ const routes: Routes = [
   },
   {
     path: 'characters',
-    loadChildren: () => import('./characters/characters-routing.module').then(m => m.CharactersRoutingModule)
+    loadChildren: () => import('./characters/characters.module').then(m => m.CharactersModule)
 
   },
   {
     path: '404',
     component: ErrorPageComponent
+  },
+  {
+    path: '',
+    component: HomeComponent
   },
   {
     path: '**',

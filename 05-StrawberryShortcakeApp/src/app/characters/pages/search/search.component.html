@@ -1,1 +1,25 @@
-<p>search works!</p>
+<div fxLayout="column">
+  <div>
+    <h1>Search Characters</h1>
+    <mat-divider></mat-divider>
+  </div>
+  <div fxLayout="column">
+    <h3>Searcher</h3>
+
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Pick one" aria-label="Number" matInput [matAutocomplete]="auto" [(ngModel)]="term"
+        (input)="searching()">
+
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="optionSelected( $event )">
+        <mat-option *ngFor="let character of characters" [value]="character">
+          {{character.name}}
+        </mat-option>
+
+        <mat-option value="" *ngIf="characters.length === 0 && term.length>0">
+          Could not find anything with {{ term }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+  <div>{{characterSelected | json}}</div>
+</div>

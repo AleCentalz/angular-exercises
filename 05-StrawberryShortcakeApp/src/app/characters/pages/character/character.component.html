@@ -1,1 +1,30 @@
-<p>character works!</p>
+<mat-grid-list cols="1" *ngIf="!character; else divChar">
+  <!-- obligatorio poner el no. de cols -->
+  <mat-grid-tile>
+    <mat-spinner></mat-spinner>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divChar>
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px">
+    <div fxFlex="50">
+      <h1>{{ character.name }}</h1>
+      <mat-divider></mat-divider>
+      <br>
+      <img [src]="character | image" alt="Character's image">
+    </div>
+    <div fxFlex="50">
+      <h1>{{ character.publisher }}</h1>
+      <mat-divider></mat-divider>
+
+      <mat-list>
+        <mat-list-item>{{character.dessert}}</mat-list-item>
+        <mat-list-item>{{character.pet}}</mat-list-item>
+        <mat-list-item>{{character.name}}</mat-list-item>
+      </mat-list>
+
+      <br>
+      <button mat-button color="warn" (click)="back()">Back</button>
+    </div>
+  </div>
+</ng-template>

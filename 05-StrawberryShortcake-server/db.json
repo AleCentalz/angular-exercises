@@ -1,0 +1,74 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "usuario": "AleCentalz",
+      "email": "alecentalz@gmail.com"
+    }
+  ],
+  "characters": [
+    {
+      "id": "ss",
+      "name": "Strawberry Shortcake",
+      "publisher": "American Greetings",
+      "dessert": "Strawberry shortcake",
+      "pet": "Pupcake and Custard"
+    },
+    {
+      "id": "ac",
+      "name": "Angel Cake",
+      "publisher": "American Greetings",
+      "dessert": "Vanilla cake",
+      "pet": "Vanilla Icing"
+    },
+    {
+      "id": "ob",
+      "name": "Orange Blossom",
+      "publisher": "American Greetings",
+      "dessert": "Orange juice",
+      "pet": "Mermelade"
+    },
+    {
+      "id": "gs",
+      "name": "Ginger Snap",
+      "publisher": "American Greetings",
+      "dessert": "Cookies and gingerbread",
+      "pet": "Chocolate"
+    },    
+    {
+      "id": "ad",
+      "name": "Apple Dumplin'",
+      "publisher": "American Greetings",
+      "dessert": "Apple dumplings",
+      "pet": "Apple"
+    },    
+    {
+      "id": "hp",
+      "name": "Huckleberry Pie",
+      "publisher": "American Greetings",
+      "dessert": "Huckleberries",
+      "pet": "Shoofy"
+    },
+    {
+      "id": "bm",
+      "name": "Blueberry Muffin",
+      "publisher": "American Greetings",
+      "dessert": "Blueberries",
+      "pet": "Cheesecake"
+    },
+    {
+      "id": "rs",
+      "name": "Rainbow Sherbet",
+      "publisher": "American Greetings",
+      "dessert": "Rainbow sherbets",
+      "pet": "Triple Ripple"
+    },
+    {
+      "id": "pf",
+      "name": "Peppermint Frzz",
+      "publisher": "American Greetings",
+      "dessert": "Mint",
+      "pet": "Kamaleon"
+    }
+  ]
+}
