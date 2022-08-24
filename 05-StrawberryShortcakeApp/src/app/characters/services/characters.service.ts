@@ -23,5 +23,18 @@ export class CharactersService {
   getSuggestions(term: string): Observable<Characters[]> {
     return this.http.get<Characters[]>(`${this.baseUrl}/characters?q=${term}&_limit=6`);
   }
+
+  addCharacter(character: Characters): Observable<Characters> {
+    return this.http.post<Characters>(`${this.baseUrl}/characters`, character);
+  }
+
+  updateCharacter(character: Characters): Observable<Characters> {
+    return this.http.put<Characters>(`${this.baseUrl}/characters/${character.id}`, character);
+  }
+
+  deleteCharacter( id: string): Observable<any> {
+    return this.http.delete<any>(`${this.baseUrl}/characters/${ id }`);
+  }
+
 }
 

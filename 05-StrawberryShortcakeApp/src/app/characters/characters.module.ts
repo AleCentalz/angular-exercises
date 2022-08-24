@@ -15,6 +15,7 @@ import { MaterialModule } from '../material/material.module';
 import { CharacterCardComponent } from './components/character-card/character-card.component';
 //pipes
 import { ImagePipe } from './pipes/image.pipe';
+import { ConfirmComponent } from './components/confirm/confirm.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ImagePipe } from './pipes/image.pipe';
     HomeComponent,
     ListComponent,
     CharacterCardComponent,
-    ImagePipe
+    ImagePipe,
+    ConfirmComponent
   ],
   imports: [
     CommonModule,
